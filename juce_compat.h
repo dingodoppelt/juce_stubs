@@ -50,20 +50,18 @@ namespace juce
     using uchar = unsigned char;
     using juce_wchar = wchar_t;
 
-    namespace MathConstants
+    template <typename T>
+    class MathConstants
     {
-        template <typename T>
-        constexpr T pi = static_cast<T>(3.1415926535897932384626433832795);
 
-        template <typename T>
-        constexpr T twoPi = static_cast<T>(6.283185307179586476925286766559);
+        static constexpr T pi = static_cast<T>(3.1415926535897932384626433832795);
 
-        template <typename T>
-        constexpr T halfPi = static_cast<T>(1.5707963267948966192313216916398);
+        static constexpr T twoPi = static_cast<T>(6.283185307179586476925286766559);
 
-        template <typename T>
-        constexpr T epsilon = static_cast<T>(1e-7);
-    }
+        static constexpr T halfPi = static_cast<T>(1.5707963267948966192313216916398);
+
+        static constexpr T epsilon = static_cast<T>(1e-7);
+    };
 
     namespace ValueSmoothingTypes
     {
